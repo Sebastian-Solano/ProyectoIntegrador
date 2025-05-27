@@ -606,8 +606,11 @@ Algoritmo EsctructurasDeControl
 					contador=0
 					
 					Repetir
+						Limpiar Pantalla
 						Repetir
-							Escribir "Ingrese una nota (0 - 10):"
+							Escribir "Bienvenido al sistema de promedio"
+							Escribir "El intervalo de calificacion es del 01 al 10"
+							Escribir Sin Saltar "Ingrese una nota: "
 							Leer nota
 						Hasta Que nota >= 0 Y nota <= 10
 						
