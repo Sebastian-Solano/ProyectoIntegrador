@@ -8,13 +8,13 @@ Proceso TrianguloMitadInferiorIzquierda
         Si A <= 1 Entonces
             Escribir "La altura debe ser mayor a 1. Intenta de nuevo."
         FinSi
+		Limpiar Pantalla
     Hasta Que A > 1
 	
     CrearTriangulo(A)
 	
 FinProceso
 
-// Imprime línea alineada a la derecha
 SubProceso ImprimirAsteriscosDerecha(F, Altura)
     Definir i, j Como Entero
 	
@@ -29,7 +29,6 @@ SubProceso ImprimirAsteriscosDerecha(F, Altura)
     Escribir ""
 FinSubProceso
 
-// Imprime línea alineada a la izquierda
 SubProceso ImprimirAsteriscosIzquierda(F)
     Definir i Como Entero
 	
@@ -40,18 +39,14 @@ SubProceso ImprimirAsteriscosIzquierda(F)
     Escribir ""
 FinSubProceso
 
-// Procedimiento principal
 SubProceso CrearTriangulo(A)
     Definir i Como Entero
     Definir AlturaTotal Como Entero
     AlturaTotal <- A + 1
 	
-    // Parte superior (derecha)
     Para i <- 2 Hasta AlturaTotal Con Paso 1 Hacer
         ImprimirAsteriscosDerecha(i, AlturaTotal)
     FinPara
-	
-    // Parte inferior (izquierda)
     Para i <- (AlturaTotal - 1) Hasta 2 Con Paso -1 Hacer
         ImprimirAsteriscosIzquierda(i)
     FinPara
